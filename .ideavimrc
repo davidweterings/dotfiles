@@ -1,0 +1,53 @@
+# general settings
+set scrolloff=10
+set number
+set showmode
+set showcmd
+set visualbell
+set clipboard+=unnamedplus
+imap jj <Esc>
+
+# search improvements
+set ignorecase
+set smartcase
+set incsearch
+set nohlsearch
+
+
+let mapleader = " "
+map <leader>c <action>(CommentByLineComment)
+map <leader>rn <Action>(RenameElement)
+map <leader>rs <Action>(ChangeSignature)
+
+# 3rd party plugins
+set highlightedyank
+
+" Useful for C# interfaces navigation
+nmap gi :action GotoImplementation<CR>
+
+set nerdtree
+" Open NERDTree (use q to exit)
+map <leader>x :NERDTreeToggle<CR>
+
+set which-key
+let g:WhichKeyDesc_display = "<leader>d Display options"
+let g:WhichKeyDesc_leader = "<leader>x Open file explorer"
+let g:WhichKeyDesc_comment = "<leader>c Comment line"
+let g:WhichKeyDesc_refactoring = "<leader>r Refactoring menu"
+let g:WhichKeyDesc_refactoring_rename = "<leader>rn Rename element"
+let g:WhichKeyDesc_refactoring_change_signature = "<leader>rs Change signature"
+
+#set timeoutlen = 5000
+set notimeout
+
+
+# unknown if useful or even doing something
+#filetype plugin indent on
+#filetype indent on
+#syntax enable
+#set ruler
+#set nowrap
+#set expandtab " use spaces instead of tabs
+
+let g:netrw_browse_split = 2
+
